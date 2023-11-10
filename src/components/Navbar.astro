@@ -1,0 +1,59 @@
+---
+import logo from '../assets/svg/logoPortafolio2.svg'
+---
+
+<nav
+  class='flex justify-between py-4 items-center px-8 backdrop-blur-2xl rounded-b-xl'
+  id='navbar'
+>
+  <img
+    src={logo.src}
+    alt='logo portfolio'
+    class='h-14'
+  />
+  <ul class='flex gap-x-14'>
+    <li
+      class='hover:text-[#f3b664] cursor-pointer px-3 transition-all active:text-[#f3b664]'
+    >
+      <a href='#home'>Inicio</a>
+    </li>
+    <li class='hover:text-[#f3b664] cursor-pointer'>
+      <a href='#experience'>Experiencia</a>
+    </li>
+    <li class='hover:text-[#f3b664] cursor-pointer transition-all'>
+      <a href='#projects'>Proyectos</a>
+    </li>
+    <li class='hover:text-[#f3b664] cursor-pointer'>
+      <a href='#about-me'>Sobre mi</a>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const sections = document.querySelectorAll('section')
+  const menuItems = document.querySelectorAll('nav ul li')
+
+  function setActiveLink() {
+    let activeLinkFound = false
+    sections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect()
+      if (rect.top < window.innerHeight / 3 && rect.bottom > 0) {
+        menuItems.forEach((item) => item.classList.remove('active'))
+        menuItems[index]?.classList.add('active')
+        activeLinkFound = true
+      }
+    })
+    if (!activeLinkFound) {
+      menuItems[0]?.classList.add('active')
+    }
+  }
+
+  window.addEventListener('scroll', setActiveLink)
+  setActiveLink()
+</script>
+
+<style>
+  nav ul li.active {
+    color: #f3b664;
+  }
+</style>

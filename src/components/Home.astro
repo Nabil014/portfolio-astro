@@ -1,0 +1,94 @@
+---
+import GithubIcon from '../assets/icons/Github.astro'
+import LinkedinIcon from '../assets/icons/Linkedin.astro'
+import ButtonCV from './common/ButtonCV.astro'
+---
+
+<main class='flex h-screen justify-center items-center max-w-5xl px-8'>
+  <div class='w-full'>
+    <h1 class='font-normal text-8xl font-RobotoFlex'>Nabil Allis</h1>
+    <div class='container-slider flex items-center'>
+      <ul class='slider ul text-4xl tracking-tighter font-Ubuntu'>
+        <li class='text-[#f66a41] italic'>full stack</li>
+        <li class='text-[#f66a41] italic'>frontend</li>
+        <li class='text-[#f66a41] italic'>backend</li>
+      </ul>
+      <h3 class='font-Ubuntu text-3xl pt-3'>developer</h3>
+    </div>
+    <div class='flex gap-x-4 py-6 items-center'>
+      <a
+        target='_blank'
+        href='https://www.linkedin.com/in/nabil-allis/'
+        class='text-white hover:text-[#427D9D] scale-110 hover:scale-125 transition-all duration-300'
+        ><LinkedinIcon /></a
+      >
+      <a
+        target='_blank'
+        href='https://github.com/Nabil014'
+        class='text-white hover:text-[#427D9D] scale-110 hover:scale-125 transition-all duration-300'
+        ><GithubIcon /></a
+      >
+      <ButtonCV text='Descargar CV' />
+    </div>
+  </div>
+  <div class='flex flex-col gap-y-4'>
+    <p class='text-2xl text-white/60'>
+      <span class='font-NotoSerif font-light text-[#F9B572] text-3xl'
+        >+1 año</span
+      >
+       de experiencia en el desarrollo web.
+    </p>
+    <p class='text-2xl text-white/60'>
+      <span class='font-NotoSerif font-light text-[#F9B572] text-3xl'
+        >+3 años</span
+      >
+       liderando empresa de computación.
+    </p>
+  </div>
+</main>
+
+<style>
+  .slider {
+    width: 180px;
+    height: 70px;
+    position: relative;
+    animation: slide 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  }
+  li {
+    position: absolute;
+    height: 70px;
+    top: 200%;
+    line-height: 70px;
+    font-size: 45px;
+  }
+  li:first-child {
+    top: 100%;
+  }
+  .container-slider {
+    overflow: hidden;
+  }
+  li:last-child {
+    top: 300%;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    15%,
+    30% {
+      transform: translateY(-100%);
+    }
+    45%,
+    60% {
+      transform: translateY(-200%);
+    }
+    75%,
+    90% {
+      transform: translateY(-300%);
+    }
+    100% {
+      transform: translateY(-400%);
+    }
+  }
+</style>

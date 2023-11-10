@@ -1,0 +1,25 @@
+---
+import data from '../../data/data.json'
+import Card from './Card.astro'
+---
+
+<div
+  class='flex items-center flex-col gap-y-8 justify-center pb-8 min-h-screen pt-28'
+>
+  <h2 class='text-4xl font-RobotoFlex'>Proyectos</h2>
+  <div
+    class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 place-items-center'
+  >
+    {
+      data.dataProjects.map((project) => (
+        <Card
+          demo={project.demo}
+          repo={project.repo}
+          image={project.image}
+          title={project.title}
+          description={project.description}
+        />
+      ))
+    }
+  </div>
+</div>

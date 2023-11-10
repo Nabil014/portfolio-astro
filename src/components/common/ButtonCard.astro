@@ -1,0 +1,18 @@
+---
+interface Props {
+  text: string
+  href?: string
+}
+
+const { text, href } = Astro.props
+---
+
+<a
+  href='#_'
+  class='rounded px-5 py-1.5 overflow-hidden group bg-[#f44f29] relative hover:bg-gradient-to-r hover:from-[#f44f29] hover:to-[#ff602a] text-white hover:ring-2 hover:ring-offset-2 hover:ring-[#ff602a] transition-all ease-out duration-300'
+>
+  <span
+    class='absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease'
+  ></span>
+  <span class='relative'>{text}</span>
+</a>
