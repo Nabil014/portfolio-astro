@@ -4,11 +4,13 @@ import Card from './Card.astro'
 ---
 
 <div
-  class='flex items-center flex-col gap-y-8 justify-center pb-8 min-h-screen pt-28'
+  class='flex items-center flex-col gap-y-8 justify-center pb-8 min-h-screen pt-[88px]'
 >
-  <h2 class='text-4xl font-RobotoFlex'>Proyectos</h2>
+  <div class='flex w-[94%]'>
+    <h2 class='text-4xl font-RobotoFlex'>Proyectos</h2>
+  </div>
   <div
-    class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 place-items-center'
+    class='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12 place-items-center px-6'
   >
     {
       data.dataProjects.map((project) => (
@@ -17,7 +19,6 @@ import Card from './Card.astro'
           repo={project.repo}
           image={project.image}
           title={project.title}
-          description={project.description}
         />
       ))
     }

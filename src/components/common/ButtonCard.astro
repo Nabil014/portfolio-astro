@@ -8,7 +8,8 @@ const { text, href } = Astro.props
 ---
 
 <a
-  href='#_'
+  href={href}
+  target='_blank'
   class='rounded px-5 py-1.5 overflow-hidden group bg-[#f44f29] relative hover:bg-gradient-to-r hover:from-[#f44f29] hover:to-[#ff602a] text-white hover:ring-2 hover:ring-offset-2 hover:ring-[#ff602a] transition-all ease-out duration-300'
 >
   <span

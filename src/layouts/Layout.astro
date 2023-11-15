@@ -78,7 +78,7 @@ const { title } = Astro.props
       <Background />
     </div>
     <nav
-      class='z-50 max-w-5xl mx-auto sticky top-0'
+      class='z-50 max-w-6xl mx-auto sticky top-0'
       id='navbar'
     >
       <Navbar />
@@ -87,16 +87,19 @@ const { title } = Astro.props
       <section id='home'>
         <Home />
       </section>
-      <div class='w-full h-[2px] bg-neutral-800'></div>
-      <section id='experience'>
+      <div class='w-full h-[2px] bg-neutral-800 hidden md:block'></div>
+      <section
+        id='experience'
+        class='pb-10 md:pb-0'
+      >
         <Experience />
       </section>
-      <div class='w-full h-[2px] bg-neutral-800'></div>
+      <div class='w-full h-[2px] bg-neutral-800 hidden md:block'></div>
 
       <section id='projects'>
         <Projects />
       </section>
-      <div class='w-full h-[2px] bg-neutral-800'></div>
+      <div class='w-full h-[2px] bg-neutral-800 hidden md:block'></div>
     </main>
     <slot />
   </body>

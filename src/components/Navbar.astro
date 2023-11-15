@@ -3,7 +3,7 @@ import logo from '../assets/svg/logoPortafolio2.svg'
 ---
 
 <nav
-  class='flex justify-between py-4 items-center px-8 backdrop-blur-2xl rounded-b-xl'
+  class='hidden md:flex justify-between py-4 items-center px-8 backdrop-blur-2xl rounded-b-xl'
   id='navbar'
 >
   <img
@@ -11,10 +11,9 @@ import logo from '../assets/svg/logoPortafolio2.svg'
     alt='logo portfolio'
     class='h-14'
   />
+
   <ul class='flex gap-x-14'>
-    <li
-      class='hover:text-[#f3b664] cursor-pointer px-3 transition-all active:text-[#f3b664]'
-    >
+    <li class='hover:text-[#f3b664] cursor-pointer px-3 transition-all'>
       <a href='#home'>Inicio</a>
     </li>
     <li class='hover:text-[#f3b664] cursor-pointer'>
@@ -24,36 +23,159 @@ import logo from '../assets/svg/logoPortafolio2.svg'
       <a href='#projects'>Proyectos</a>
     </li>
     <li class='hover:text-[#f3b664] cursor-pointer'>
-      <a href='#about-me'>Sobre mi</a>
+      <a href='#contact'>Contacto</a>
     </li>
   </ul>
 </nav>
 
+<header>
+  <div
+    class='sticky top-0 left-0 right-0 backdrop-blur-xl bg-opacity-60 z-10 flex justify-between items-center px-6 py-4 md:hidden'
+  >
+    <a
+      class='font-anton text-orange-1 text-3xl'
+      href='#home'
+    >
+      <img
+        src={logo.src}
+        alt='logo portfolio'
+        class='h-14'
+      /></a
+    >
+
+    <button id='menu-icon'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        height='36'
+        width='36'
+        viewBox='0 -960 960 960'
+        ><path
+          fill='#fff'
+          d='M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z'
+        ></path></svg
+      >
+    </button>
+  </div>
+
+  <nav
+    id='mobile-menu'
+    class='hidden fixed top-0 left-0 right-0 bottom-0 bg-opacity-60 backdrop-blur-xl text-center items-center justify-center z-10'
+  >
+    <ul class='space-y-12 text-white text-3xl font-medium'>
+      <li>
+        <a
+          class='hover:text-orange-1 transition duration-300'
+          href='#home'
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          class='hover:text-orange-1 transition duration-300'
+          href='#experience'
+          >Experiencia</a
+        >
+      </li>
+      <li>
+        <a
+          class='hover:text-orange-1 transition duration-300'
+          href='#projects'
+          >Proyectos</a
+        >
+      </li>
+      <li>
+        <a
+          class='hover:text-orange-1 transition duration-300'
+          href='#contact'
+          >Contacto</a
+        >
+      </li>
+    </ul>
+    <button
+      class='fixed top-0 right-0 px-6 py-4'
+      id='close-icon'
+    >
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        height='36'
+        width='36'
+        viewBox='0 -960 960 960'
+        ><path
+          fill='#fff'
+          d='m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z'
+        ></path></svg
+      >
+    </button>
+  </nav>
+</header>
+
 <script>
-  const sections = document.querySelectorAll('section')
-  const menuItems = document.querySelectorAll('nav ul li')
+  const mobileMenu = document.querySelector('#mobile-menu')
+  const menuIcon = document.getElementById('menu-icon')
+  const closeIcon = document.getElementById('close-icon')
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a')
+  let currentActiveNav: Element | null = null
+  let currentActiveMobile: Element | null = null
 
-  function setActiveLink() {
-    let activeLinkFound = false
-    sections.forEach((section, index) => {
-      const rect = section.getBoundingClientRect()
-      if (rect.top < window.innerHeight / 3 && rect.bottom > 0) {
-        menuItems.forEach((item) => item.classList.remove('active'))
-        menuItems[index]?.classList.add('active')
-        activeLinkFound = true
-      }
-    })
-    if (!activeLinkFound) {
-      menuItems[0]?.classList.add('active')
+  const sectionArray = Array.from(document.querySelectorAll('section'))
+
+  sectionArray.forEach((elem: Element) => {
+    const root = null
+    const rootMargin = '0px'
+    const threshold = 0.1
+    const target = elem
+    const options = {
+      root,
+      rootMargin,
+      threshold,
     }
-  }
 
-  window.addEventListener('scroll', setActiveLink)
-  setActiveLink()
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const mobileMenuItem = document.querySelector(
+          `#mobile-menu a[href="#${entry.target.id}"]`
+        )
+        const navItem = document.querySelector(
+          `#navbar a[href="#${entry.target.id}"]`
+        )
+        if (entry.isIntersecting) {
+          if (currentActiveNav) {
+            currentActiveNav.classList.remove('active')
+          }
+          if (currentActiveMobile) {
+            currentActiveMobile.classList.remove('active')
+          }
+          navItem?.classList.add('active')
+          mobileMenuItem?.classList.add('active')
+          currentActiveNav = navItem
+          currentActiveMobile = mobileMenuItem
+        }
+      })
+    }, options)
+    observer.observe(target)
+  })
+
+  menuIcon?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('hidden')
+    mobileMenu?.classList.add('flex')
+    mobileMenu?.classList.add('transition-all')
+  })
+
+  closeIcon?.addEventListener('click', () => {
+    mobileMenu?.classList.add('hidden')
+    mobileMenu?.classList.remove('flex')
+  })
+
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden')
+      mobileMenu?.classList.remove('flex')
+    })
+  })
 </script>
 
 <style>
-  nav ul li.active {
+  .active {
     color: #f3b664;
   }
 </style>

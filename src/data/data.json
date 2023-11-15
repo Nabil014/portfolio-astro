@@ -2,25 +2,31 @@
   "timeline": [
     {
       "id": 1,
-      "date": "Octubre 2023",
+      "date": "2023",
       "title": "Desarrollador Frontend",
       "description": "Desarrollo de componentes con TypeScript y React basados en los modelos que me proporcionan en Figma. Implementando un enfoque mobile-first y asegurándome de hacer componentes reutilizables."
     },
     {
       "id": 2,
-      "date": "Agosto 2023",
+      "date": "2022",
       "title": "AF Air Systems - Freelance",
       "description": "Desarrollé una Single Page Application con diversas secciones para una navegación intuitiva. Esta aplicación cuenta con integración de Google Maps, envío de emails y proporciona una experiencia de usuario óptima en todos los dispositivos gracias a su diseño responsivo.",
       "href": "https://www.afairsystems.com/"
+    },
+    {
+      "id": 2,
+      "date": "2019",
+      "title": "Electriluz",
+      "description": "Liderar empresa de +30 años de informática en San Juan, Argentina. Coordinando equipos de trabajo e impulsando el crecimiento de las ventas y la satisfacción del cliente."
     }
   ],
   "dataProjects": [
     {
       "id": "1",
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1677853434/nomade-foto_j2oluu.jpg",
-      "alt": "nomade img",
+      "alt": "nómade img",
       "title": "Nómade",
-      "description": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, admin page,etc. para contratar hospedajes en cualquier parte del mundo ó también puedes ser anfitrión.",
+      "description": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, admin page,etc. para contratar hospedajes en cualquier parte del mundo.",
       "demo": "https://nomade-khaki.vercel.app/",
       "repo": "https://github.com/Nabil014/nomade",
       "tech": ["JavaScript", "React", "CSS", "MongoDB", "Node", "Redux", "Git"],
@@ -31,7 +37,7 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1699271582/h47yiqfaqlvybfktlfik.jpg",
       "alt": "countries img",
       "title": "AF Air Systems",
-      "description": "SPA para empresa de servicio y matenimiento de aires acondicionados. El cliente la solicitó en portugués y holandés. Tiene envío de emails e integración de Google Maps.",
+      "description": "SPA para empresa de servicios de refrigeración. El cliente la solicitó en portugués y holandés. Tiene envío de emails e integración de Google Maps.",
       "demo": "https://www.afairsystems.com/",
       "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
       "stack": "Frontend"
@@ -41,7 +47,7 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1690415226/Countries-tour_qjg8nf.png",
       "alt": "countries img",
       "title": "Countries Tour",
-      "description": "REST API y SPA con filtros, básqueda y ordenamiento para buscar información sobre países y distintas actividades.",
+      "description": "REST API y SPA con filtros, búsqueda y ordenamiento de países y distintas actividades.",
       "demo": "https://countries-tour.vercel.app/",
       "repo": "https://github.com/Nabil014/Countries-Tour",
       "tech": [
@@ -60,7 +66,7 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_206,w_390/v1685367550/spaceApp_d1ojrk.jpg",
       "alt": "space img",
       "title": "Space Info",
-      "description": "SPA para una empresa de turismo espacial",
+      "description": "SPA para empresa de turismo espacial",
       "demo": "https://space-app-coral.vercel.app/",
       "repo": "https://github.com/Nabil014/Space-App",
       "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
@@ -71,7 +77,7 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,w_390/v1676554046/weather2_h4ji7y.jpg",
       "alt": "weather img",
       "title": "Weather App",
-      "description": "Página web para visualizar información meteorológica y detalles específicos de diversas ciudades en todo el mundo.",
+      "description": "Web app para buscar información meteorológica y detalles específicos de diversas ciudades del mundo.",
       "demo": "https://weather-app-beta-roan.vercel.app/",
       "repo": "https://github.com/Nabil014/Weather-App",
       "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
@@ -80,7 +86,7 @@
     {
       "id": "7",
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_206,w_390/v1685535960/dolar-app_eehswv.jpg",
-      "alt": "dolar img",
+      "alt": "dollar img",
       "title": "Dollar Converter",
       "description": "Página convertir de $ARG a USD",
       "demo": "https://dollar-app-chi.vercel.app/",
@@ -91,7 +97,7 @@
     {
       "id": "4",
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1677641404/Sin_t%C3%ADtulo_ktf0ak.jpg",
-      "alt": "spotify img",
+      "alt": "Spotify img",
       "title": "Spotify Clone",
       "description": "Landing page de Spotify desarrollada con TailwindCSS.",
       "demo": "https://clon-spotify-beta.vercel.app/",
