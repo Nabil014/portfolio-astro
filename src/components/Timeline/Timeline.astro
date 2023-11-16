@@ -7,9 +7,11 @@ import ItemTimeline from '../Timeline/ItemTimeline.astro'
   {
     data.timeline.map((item) => (
       <ItemTimeline
-        title={item.title}
+        titleEN={item.titleEN}
+        titleES={item.titleES}
         date={item.date}
-        description={item.description}
+        descriptionES={item.descriptionES}
+        descriptionEN={item.descriptionEN}
         href={item.href}
       />
     ))

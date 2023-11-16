@@ -1,0 +1,85 @@
+---
+import Background from '../components/Backgroun.astro'
+import NavbarError from '../components/NavbarError.astro'
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content='Astro description'
+    />
+    <meta
+      name='viewport'
+      content='width=device-width'
+    />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='/favicon.svg'
+    />
+    <meta
+      name='generator'
+      content={Astro.generator}
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.googleapis.com'
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.gstatic.com'
+      crossorigin
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500;8..144,700&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.googleapis.com'
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.gstatic.com'
+      crossorigin
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300;1,400&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.googleapis.com'
+    />
+    <link
+      rel='preconnect'
+      href='https://fonts.gstatic.com'
+      crossorigin
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;1,300&display=swap'
+      rel='stylesheet'
+    />
+    <title>404 Page not found</title>
+  </head>
+  <body class='bg-[#e9e9e7]'>
+    <nav
+      class='z-50 max-w-6xl mx-auto sticky top-0'
+      id='navbar'
+    >
+      <NavbarError />
+    </nav>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    background-size: 224px;
+    scroll-behavior: smooth;
+  }
+</style>

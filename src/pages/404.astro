@@ -1,0 +1,18 @@
+---
+import Error from '../layouts/ErrorLayout.astro'
+import image404 from '../assets/image/Image-404.png'
+import { Image } from 'astro:assets'
+---
+
+<Error title='404 | Nabil Allis'>
+  <div class=''>
+    <Image
+      src={image404}
+      alt='thisIsFine gif'
+      class='h-[70vh] w-screen object-contain z-50'
+    />
+    <div class='flex justify-center items-center text-5xl'>
+      <h2 class='font-RobotoFlex text-[#6d6e72]'>Opss... 404 page not found</h2>
+    </div>
+  </div>
+</Error>

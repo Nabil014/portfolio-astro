@@ -3,21 +3,25 @@
     {
       "id": 1,
       "date": "2023",
-      "title": "Desarrollador Frontend",
-      "description": "Desarrollo de componentes con TypeScript y React basados en los modelos que me proporcionan en Figma. Implementando un enfoque mobile-first y asegurándome de hacer componentes reutilizables."
+      "titleES": "Desarrollador Frontend",
+      "titleEN": "Frontend Developer",
+      "descriptionES": "Desarrollo de componentes con TypeScript y React basados en los modelos que me proporcionan en Figma. Implementando un enfoque mobile-first y asegurándome de hacer componentes reutilizables.",
+      "descriptionEN": "Development of components with TypeScript and React based on the models provided to me in Figma. Implementing a mobile-first approach and ensuring to create reusable components."
     },
     {
       "id": 2,
       "date": "2022",
-      "title": "AF Air Systems - Freelance",
-      "description": "Desarrollé una Single Page Application con diversas secciones para una navegación intuitiva. Esta aplicación cuenta con integración de Google Maps, envío de emails y proporciona una experiencia de usuario óptima en todos los dispositivos gracias a su diseño responsivo.",
+      "titleES": "AF Air Systems - Freelance",
+      "descriptionES": "Diseño y desarrollo una Single Page Application con diversas secciones para una navegación intuitiva. Esta aplicación cuenta con integración de Google Maps, envío de emails y proporciona una experiencia de usuario óptima en todos los dispositivos gracias a su diseño responsivo.",
+      "descriptionEN": "Design and development of a Single Page Application with various sections for intuitive navigation. This application features Google Maps integration, email sending, and provides an optimal user experience on all devices thanks to its responsive design.",
       "href": "https://www.afairsystems.com/"
     },
     {
       "id": 2,
       "date": "2019",
-      "title": "Electriluz",
-      "description": "Liderar empresa de +30 años de informática en San Juan, Argentina. Coordinando equipos de trabajo e impulsando el crecimiento de las ventas y la satisfacción del cliente."
+      "titleES": "Electriluz",
+      "descriptionES": "Liderar empresa de +30 años de informática en San Juan, Argentina. Coordinando equipos de trabajo e impulsando el crecimiento de las ventas y la satisfacción del cliente.",
+      "descriptionEN": "Leading a 30+ year old IT company in San Juan, Argentina. Coordinating work teams and driving sales growth and customer satisfaction."
     }
   ],
   "dataProjects": [
@@ -26,7 +30,8 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1677853434/nomade-foto_j2oluu.jpg",
       "alt": "nómade img",
       "title": "Nómade",
-      "description": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, admin page,etc. para contratar hospedajes en cualquier parte del mundo.",
+      "descriptionES": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, admin page,etc. para contratar hospedajes en cualquier parte del mundo.",
+      "descriptionEN": "REST API and Single Page Application (SPA) with map integration, payment gateway, admin page, etc. for booking accommodations anywhere in the world.",
       "demo": "https://nomade-khaki.vercel.app/",
       "repo": "https://github.com/Nabil014/nomade",
       "tech": ["JavaScript", "React", "CSS", "MongoDB", "Node", "Redux", "Git"],
@@ -37,7 +42,8 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1699271582/h47yiqfaqlvybfktlfik.jpg",
       "alt": "countries img",
       "title": "AF Air Systems",
-      "description": "SPA para empresa de servicios de refrigeración. El cliente la solicitó en portugués y holandés. Tiene envío de emails e integración de Google Maps.",
+      "descriptionES": "SPA para empresa de servicios de refrigeración. El cliente la solicitó en portugués y holandés. Tiene envío de emails e integración de Google Maps.",
+      "descriptionEN": "SPA for a refrigeration services company. The client requested it in Portuguese and Dutch. It includes email sending and Google Maps integration.",
       "demo": "https://www.afairsystems.com/",
       "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
       "stack": "Frontend"
@@ -47,7 +53,8 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1690415226/Countries-tour_qjg8nf.png",
       "alt": "countries img",
       "title": "Countries Tour",
-      "description": "REST API y SPA con filtros, búsqueda y ordenamiento de países y distintas actividades.",
+      "descriptionES": "REST API y SPA con filtros, búsqueda y ordenamiento de países y distintas actividades.",
+      "descriptionEN": "REST API and SPA with filters, search and sorting of countries and various activities.",
       "demo": "https://countries-tour.vercel.app/",
       "repo": "https://github.com/Nabil014/Countries-Tour",
       "tech": [
