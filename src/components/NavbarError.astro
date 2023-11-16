@@ -11,7 +11,7 @@ const t = useTranslations(lang)
   class='hidden md:flex justify-between py-4 items-center px-8 backdrop-blur-2xl rounded-b-xl'
   id='navbar'
 >
-  <a href='#home'>
+  <a href='/#home'>
     <img
       src={logo.src}
       alt='logo portfolio'
@@ -20,20 +20,19 @@ const t = useTranslations(lang)
   </a>
 
   <ul class='flex gap-x-14 items-center'>
-    <li class='hover:text-[#f3b664] cursor-pointer px-3 transition-all'>
-      <a href='#home'>{t('nav.home')}</a>
+    <li
+      class='hover:text-[#f3b664] text-[#101729] cursor-pointer px-3 transition-all'
+    >
+      <a href='/#home'>{t('nav.home')}</a>
     </li>
     <li class='hover:text-[#f3b664] cursor-pointer'>
-      <a href='#experience'>{t('nav.experience')}</a>
+      <a href='/#experience'>{t('nav.experience')}</a>
     </li>
     <li class='hover:text-[#f3b664] cursor-pointer transition-all'>
-      <a href='#projects'>{t('nav.projects')}</a>
+      <a href='/#projects'>{t('nav.projects')}</a>
     </li>
     <li class='hover:text-[#f3b664] cursor-pointer'>
-      <a href='#contact'>{t('nav.contact')}</a>
-    </li>
-    <li>
-      <Dropdown text={lang === 'en' ? 'Language' : 'Idioma'} />
+      <a href='/#contact'>{t('nav.contact')}</a>
     </li>
   </ul>
 </nav>
@@ -44,7 +43,7 @@ const t = useTranslations(lang)
   >
     <a
       class='font-anton text-orange-1 text-3xl'
-      href='#home'
+      href='/#home'
     >
       <img
         src={logo.src}
@@ -71,32 +70,32 @@ const t = useTranslations(lang)
     id='mobile-menu'
     class='hidden fixed top-0 left-0 right-0 bottom-0 bg-opacity-60 backdrop-blur-xl text-center items-center justify-center z-10'
   >
-    <ul class='space-y-12 text-white text-3xl font-medium'>
+    <ul class='space-y-12 text-[#101729] text-3xl font-medium'>
       <li>
         <a
           class='hover:text-orange-1 transition duration-300'
-          href='#home'
+          href='/#home'
           >{t('nav.home')}</a
         >
       </li>
       <li>
         <a
           class='hover:text-orange-1 transition duration-300'
-          href='#experience'
+          href='/#experience'
           >{t('nav.experience')}</a
         >
       </li>
       <li>
         <a
           class='hover:text-orange-1 transition duration-300'
-          href='#projects'
+          href='/#projects'
           >{t('nav.projects')}</a
         >
       </li>
       <li>
         <a
           class='hover:text-orange-1 transition duration-300'
-          href='#contact'
+          href='/#contact'
           >{t('nav.contact')}</a
         >
       </li>

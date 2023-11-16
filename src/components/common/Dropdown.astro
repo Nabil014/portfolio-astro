@@ -1,0 +1,96 @@
+---
+import { language } from '../../i18n/ui'
+import ArgSvg from '../../assets/icons/ArgSvg.astro'
+import EnSvg from '../../assets/icons/EnSvg.astro'
+import LanguageSvg from '../../assets/icons/LanguageSvg.astro'
+
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+---
+
+<div class='relative'>
+  <button
+    onclick=''
+    id='dropdownButton'
+    class='text-white gap-x-1 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center'
+  >
+    <LanguageSvg />
+    {text}
+    <svg
+      class='w-2.5 h-2.5 ms-3'
+      fill='none'
+      viewBox='0 0 10 6'
+      id='arrow'
+    >
+      <path
+        stroke='currentColor'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        stroke-width='2'
+        d='m1 1 4 4 4-4'
+      ></path>
+    </svg>
+  </button>
+
+  <div
+    id='dropdown'
+    class='z-10 hidden absolute top-12 left-3 bg-white rounded-lg shadow w-32'
+  >
+    <ul class='py-2 text-sm text-gray-800 font-Ubuntu'>
+      {
+        Object.entries(language).map(([lang, label]) => (
+          <>
+            <li>
+              <a
+                href={`${lang === 'es' ? '/' : `/${lang}/`}`}
+                class='flex items-center px-2 py-2 hover:bg-[#FFE3BB]'
+              >
+                {lang === 'en' ? <EnSvg /> : <ArgSvg />}
+                {label}
+              </a>
+            </li>
+          </>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  const dropdownButton = document.getElementById('dropdownButton')
+  const dropdownMenu = document.getElementById('dropdown')
+  const toggleArrow = document.getElementById('arrow')
+  const menuOptions = document.querySelectorAll('#dropdown a')
+
+  const toggleDropdown = function () {
+    dropdownMenu?.classList.toggle('hidden')
+    toggleArrow?.classList.toggle('arrow')
+  }
+
+  dropdownButton?.addEventListener('click', function (e: MouseEvent) {
+    e.stopPropagation()
+    toggleDropdown()
+  })
+
+  menuOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      toggleDropdown()
+    })
+  })
+
+  document.documentElement.addEventListener('click', function () {
+    if (!dropdownMenu?.classList.contains('hidden')) {
+      toggleDropdown()
+    }
+  })
+</script>
+
+<style>
+  .arrow {
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+  }
+</style>
