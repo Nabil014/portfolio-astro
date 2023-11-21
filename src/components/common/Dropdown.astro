@@ -15,7 +15,7 @@ const { text } = Astro.props
   <button
     onclick=''
     id='dropdownButton'
-    class='text-white gap-x-1 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center'
+    class='text-white gap-x-1 focus:outline-none rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center'
   >
     <LanguageSvg />
     {text}
@@ -70,7 +70,7 @@ const { text } = Astro.props
     toggleArrow?.classList.toggle('arrow')
   }
 
-  dropdownButton?.addEventListener('click', function (e: MouseEvent) {
+  dropdownButton?.addEventListener('click', function (e) {
     e.stopPropagation()
     toggleDropdown()
   })

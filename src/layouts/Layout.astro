@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.astro'
 import Home from '../components/Home.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects/Projects.astro'
+import Contact from '../components/Contact.astro'
 interface Props {
   title: string
 }
@@ -96,10 +97,16 @@ const { title } = Astro.props
       </section>
       <div class='w-full h-[2px] bg-neutral-800 hidden md:block'></div>
 
-      <section id='projects'>
+      <section
+        id='projects'
+        class='mb-20'
+      >
         <Projects />
       </section>
       <div class='w-full h-[2px] bg-neutral-800 hidden md:block'></div>
+      <section id='contact'>
+        <Contact />
+      </section>
     </main>
     <slot />
   </body>

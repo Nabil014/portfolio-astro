@@ -21,6 +21,8 @@ export const ui = {
 
     'experience.title': 'Experiencia',
     'projects.title': 'Proyectos',
+    'contact.title': 'Trabajemos juntos',
+    'contact.email': 'Envíame un email',
   },
   en: {
     'nav.home': 'Home',
@@ -36,5 +38,7 @@ export const ui = {
 
     'experience.title': 'Experience',
     'projects.title': 'Projects',
+    'contact.title': "Let's work together",
+    'contact.email': 'Send me an email',
   },
 } as const

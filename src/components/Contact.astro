@@ -1,0 +1,88 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+---
+
+<main
+  class='h-[100vh] max-w-5xl flex items-center flex-col justify-center gap-y-8 md:pt-[88px] lg:mb-24'
+>
+  <div
+    class='circle_contact-1 animate-pulse opacity-25'
+    data-astro-cid-xmivup5a=''
+  >
+  </div>
+  <h2
+    class='z-30 font-bold text-3xl text-[#FFFFFF] text-center drop-shadow-2xl sm:text-5xl 2xl:text-7xl'
+    data-astro-cid-xmivup5a=''
+  >
+    {t('contact.title')}
+  </h2>
+  <a
+    href='mailto:nallis014@gmail.com'
+    class='contact-mail z-30 text-white font-normal text-sm flex items-center justify-center gap-3 sm:text-xl sm:gap-4 2xl:text-2xl 2xl:gap-6'
+    ><p data-astro-cid-xmivup5a=''>{t('contact.email')}</p><svg
+      width='34px'
+      height='34px'
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      ><g
+        id='SVGRepo_bgCarrier'
+        stroke-width='0'
+      ></g><g
+        id='SVGRepo_tracerCarrier'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      ></g><g id='SVGRepo_iconCarrier'>
+        <path
+          fill-rule='evenodd'
+          clip-rule='evenodd'
+          d='M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z'
+          fill='#f66a41'
+        ></path>
+      </g></svg
+    ></a
+  >
+</main>
+
+<style>
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  h2 {
+    filter: drop-shadow(0px 0.5px 1px white);
+  }
+  .contact-mail {
+    transition-duration: 150ms;
+  }
+
+  .contact-mail:hover {
+    gap: 20px;
+    text-shadow: 0px 1px 1px #e5e7eb;
+  }
+
+  .circle_contact-1[data-astro-cid-xmivup5a] {
+    width: 220px;
+    height: 220px;
+    border: 0.9em solid #f9b572;
+    border-radius: 100%;
+    position: absolute;
+  }
+  @media only screen and (min-width: 640px) {
+    .circle_contact-1[data-astro-cid-xmivup5a] {
+      width: 320px;
+      height: 320px;
+      border: 1.3em solid #f9b572;
+    }
+  }
+  @media only screen and (min-width: 1536px) {
+    .circle_contact-1[data-astro-cid-xmivup5a] {
+      width: 460px;
+      height: 460px;
+      border: 1.7em solid #f9b572;
+    }
+  }
+</style>

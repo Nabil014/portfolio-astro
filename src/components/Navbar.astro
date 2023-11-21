@@ -11,7 +11,7 @@ const t = useTranslations(lang)
   class='hidden md:flex justify-between py-4 items-center px-8 backdrop-blur-2xl rounded-b-xl'
   id='navbar'
 >
-  <a href='#home'>
+  <a href='#top'>
     <img
       src={logo.src}
       alt='logo portfolio'
@@ -19,7 +19,7 @@ const t = useTranslations(lang)
     />
   </a>
 
-  <ul class='flex gap-x-14 items-center'>
+  <ul class='flex lg:gap-x-14 gap-x-8 items-center'>
     <li class='hover:text-[#f3b664] cursor-pointer px-3 transition-all'>
       <a href='#home'>{t('nav.home')}</a>
     </li>
@@ -43,7 +43,7 @@ const t = useTranslations(lang)
     class='sticky top-0 left-0 right-0 backdrop-blur-xl bg-opacity-60 z-10 flex justify-between items-center px-6 py-4 md:hidden'
   >
     <a
-      class='font-anton text-orange-1 text-3xl'
+      class='font-RobotoFlex text-orange-1 text-3xl'
       href='#home'
     >
       <img
@@ -52,7 +52,6 @@ const t = useTranslations(lang)
         class='h-14'
       /></a
     >
-
     <button id='menu-icon'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -71,7 +70,7 @@ const t = useTranslations(lang)
     id='mobile-menu'
     class='hidden fixed top-0 left-0 right-0 bottom-0 bg-opacity-60 backdrop-blur-xl text-center items-center justify-center z-10'
   >
-    <ul class='space-y-12 text-white text-3xl font-medium'>
+    <ul class='space-y-12 text-white text-3xl'>
       <li>
         <a
           class='hover:text-orange-1 transition duration-300'
@@ -100,6 +99,9 @@ const t = useTranslations(lang)
           >{t('nav.contact')}</a
         >
       </li>
+      <li>
+        <Dropdown text={lang === 'en' ? 'Language' : 'Idioma'} />
+      </li>
     </ul>
     <button
       class='fixed top-0 right-0 px-6 py-4'
@@ -124,14 +126,16 @@ const t = useTranslations(lang)
   const menuIcon = document.getElementById('menu-icon')
   const closeIcon = document.getElementById('close-icon')
   const mobileMenuLinks = document.querySelectorAll('#mobile-menu a')
-  let currentActiveNav: Element | null = null
-  let currentActiveMobile: Element | null = null
+  let currentActiveNav: Element | null
+  let currentActiveMobile: Element | null
 
-  const sectionArray = Array.from(document.querySelectorAll('section'))
+  const sectionArray: HTMLElement[] = Array.from(
+    document.querySelectorAll('section')
+  )
 
   sectionArray.forEach((elem: Element) => {
     const root = null
-    const rootMargin = '0px'
+    const rootMargin = '-50px 0px -50px 0px'
     const threshold = 0.1
     const target = elem
     const options = {
@@ -169,6 +173,21 @@ const t = useTranslations(lang)
     mobileMenu?.classList.remove('hidden')
     mobileMenu?.classList.add('flex')
     mobileMenu?.classList.add('transition-all')
+    const dropdownButton = document.querySelector(
+      '#mobile-menu #dropdownButton'
+    )
+    const dropdownMenu = document.querySelector('#mobile-menu #dropdown')
+    const toggleArrow = document.querySelector('#mobile-menu #arrow')
+
+    const toggleDropdown = function () {
+      dropdownMenu?.classList.toggle('hidden')
+      toggleArrow?.classList.toggle('arrow')
+    }
+
+    dropdownButton?.addEventListener('click', function (e) {
+      e.stopPropagation()
+      toggleDropdown()
+    })
   })
 
   closeIcon?.addEventListener('click', () => {
