@@ -40,7 +40,10 @@ const t = useTranslations(lang)
         class='text-white hover:text-[#427D9D] scale-110 hover:scale-125 transition-all duration-300'
         ><GithubIcon /></a
       >
-      <ButtonCV text={t('home.buttonCV')} />
+      <ButtonCV
+        lang={lang}
+        text={t('home.buttonCV')}
+      />
     </div>
   </div>
 
