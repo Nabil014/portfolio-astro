@@ -54,6 +54,26 @@
       "stack": "Full Stack"
     },
     {
+      "id": "10",
+      "image": "/projects/envvault.webp",
+      "alt": "EnvVault",
+      "title": "EnvVault",
+      "descriptionES": "Gestor de archivos .env con cifrado de extremo a extremo. Un CLI publicado en npm y un panel web para guardar, sincronizar y compartir variables entre equipos sin que el servidor pueda leer ningún valor.",
+      "descriptionEN": "End-to-end encrypted .env file manager. A CLI published on npm and a web panel to store, sync and share variables across machines and teammates without the server ever reading a value.",
+      "demo": "https://www.npmjs.com/package/@nabil014/envvault-cli",
+      "demoLabel": "npm",
+      "tech": [
+        "TypeScript",
+        "Node.js",
+        "React",
+        "Vite",
+        "Tailwind",
+        "Supabase",
+        "WebCrypto"
+      ],
+      "stack": "Full Stack"
+    },
+    {
       "id": "2",
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1699271582/h47yiqfaqlvybfktlfik.jpg",
       "alt": "AF Air Systems img",
@@ -84,25 +104,6 @@
         "MongoDB",
         "Node.js",
         "Redux"
-      ],
-      "stack": "Full Stack"
-    },
-    {
-      "id": "3",
-      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1690415226/Countries-tour_qjg8nf.png",
-      "alt": "countries img",
-      "title": "Countries Tour",
-      "descriptionES": "REST API y SPA con filtros, búsqueda y ordenamiento de países y distintas actividades.",
-      "descriptionEN": "REST API and SPA with filters, search and sorting of countries and various activities.",
-      "demo": "https://countries-tour.vercel.app/",
-      "repo": "https://github.com/Nabil014/Countries-Tour",
-      "tech": [
-        "JavaScript",
-        "React",
-        "Node.js",
-        "Tailwind",
-        "PostgreSQL",
-        "Zustand"
       ],
       "stack": "Full Stack"
     }

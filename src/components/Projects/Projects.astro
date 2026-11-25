@@ -27,6 +27,7 @@ const t = useTranslations(lang)
           alt={project.alt}
           description={lang === 'en' ? project.descriptionEN : project.descriptionES}
           tech={project.tech}
+          demoLabel={'demoLabel' in project ? project.demoLabel : undefined}
         />
       ))
     }
