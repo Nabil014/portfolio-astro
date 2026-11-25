@@ -1,19 +1,21 @@
 ---
 import { Image } from 'astro:assets'
-import ButtonCard from '../common/ButtonCard.astro'
 interface Props {
   demo: string
   repo?: string
   image: string
   title: string
+  alt?: string
 }
 
-const { image, title, demo, repo } = Astro.props
+const { image, title, demo, alt } = Astro.props
 ---
 
 <a
   href={demo}
   target='_blank'
+  rel='noopener noreferrer'
+  aria-label={title}
   class='card-project m-auto p-2 w-full rounded-2xl hover:scale-105 transition duration-200'
 >
   <Image
@@ -21,7 +23,8 @@ const { image, title, demo, repo } = Astro.props
     width='390'
     height='205'
     src={image}
-    alt={title}
+    alt={alt ?? title}
+    loading='lazy'
   />
 </a>
 

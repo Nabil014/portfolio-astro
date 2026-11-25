@@ -1,0 +1,45 @@
+---
+import logIcon from '../assets/svg/logoPortafolio2.svg'
+
+interface Props {
+  title: string
+  description?: string
+  lang: string
+}
+
+const {
+  title,
+  lang,
+  description = lang === 'en'
+    ? 'Nabil Allis — Full Stack developer (Frontend & Backend). Portfolio, experience and projects.'
+    : 'Nabil Allis — Desarrollador Full Stack (Frontend y Backend). Portafolio, experiencia y proyectos.',
+} = Astro.props
+
+const site = Astro.site ?? Astro.url
+const canonical = new URL(Astro.url.pathname, site)
+---
+
+<meta charset='UTF-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<meta name='description' content={description} />
+<meta name='generator' content={Astro.generator} />
+<link rel='icon' type='image/svg+xml' href={logIcon.src} />
+<link rel='canonical' href={canonical} />
+<link rel='alternate' hreflang='es' href={new URL('/', site)} />
+<link rel='alternate' hreflang='en' href={new URL('/en/', site)} />
+<link rel='alternate' hreflang='x-default' href={new URL('/', site)} />
+
+<meta property='og:type' content='website' />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:url' content={canonical} />
+<meta property='og:locale' content={lang === 'en' ? 'en_US' : 'es_AR'} />
+<meta name='twitter:card' content='summary' />
+
+<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+<link
+  href='https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;1,300&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,500;8..144,700&family=Ubuntu:ital,wght@0,300;1,300;1,400&display=swap'
+  rel='stylesheet'
+/>
+<title>{title}</title>

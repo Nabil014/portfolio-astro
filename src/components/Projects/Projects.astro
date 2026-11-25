@@ -1,13 +1,17 @@
 ---
 import data from '../../data/data.json'
 import Card from './Card.astro'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div
   class='flex items-center flex-col gap-y-8 justify-center pb-8 min-h-screen pt-[88px] text-white'
 >
   <div class='flex w-full flex-col items-center gap-y-3'>
-    <h2 class='text-4xl font-RobotoFlex tracking-[3px]'>Proyectos</h2>
+    <h2 class='text-4xl font-RobotoFlex tracking-[3px]'>{t('projects.title')}</h2>
     <div class='w-7 h-1 bg-[#f66a41] rounded-full'></div>
   </div>
   <div
@@ -20,6 +24,7 @@ import Card from './Card.astro'
           repo={project.repo}
           image={project.image}
           title={project.title}
+          alt={project.alt}
         />
       ))
     }

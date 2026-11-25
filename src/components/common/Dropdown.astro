@@ -11,19 +11,21 @@ interface Props {
 const { text } = Astro.props
 ---
 
-<div class='relative'>
+<div class='relative' data-dropdown>
   <button
-    onclick=''
-    id='dropdownButton'
+    type='button'
+    data-dropdown-button
+    aria-haspopup='true'
+    aria-expanded='false'
     class='text-white gap-x-1 focus:outline-none rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center'
   >
     <LanguageSvg />
     {text}
     <svg
-      class='w-2.5 h-2.5 ms-3'
+      class='w-2.5 h-2.5 ms-3 transition-transform duration-300'
       fill='none'
       viewBox='0 0 10 6'
-      id='arrow'
+      data-dropdown-arrow
     >
       <path
         stroke='currentColor'
@@ -36,23 +38,22 @@ const { text } = Astro.props
   </button>
 
   <div
-    id='dropdown'
+    data-dropdown-menu
     class='z-10 hidden absolute top-12 left-3 bg-white rounded-lg shadow w-32'
   >
     <ul class='py-2 text-sm text-gray-800 font-Ubuntu'>
       {
         Object.entries(language).map(([lang, label]) => (
-          <>
-            <li>
-              <a
-                href={`${lang === 'es' ? '/' : `/${lang}/`}`}
-                class='flex items-center px-2 py-2 hover:bg-[#FFE3BB]'
-              >
-                {lang === 'en' ? <EnSvg /> : <ArgSvg />}
-                {label}
-              </a>
-            </li>
-          </>
+          <li>
+            <a
+              href={lang === 'es' ? '/' : `/${lang}/`}
+              hreflang={lang}
+              class='flex items-center px-2 py-2 hover:bg-[#FFE3BB]'
+            >
+              {lang === 'en' ? <EnSvg /> : <ArgSvg />}
+              {label}
+            </a>
+          </li>
         ))
       }
     </ul>
@@ -60,37 +61,28 @@ const { text } = Astro.props
 </div>
 
 <script>
-  const dropdownButton = document.getElementById('dropdownButton')
-  const dropdownMenu = document.getElementById('dropdown')
-  const toggleArrow = document.getElementById('arrow')
-  const menuOptions = document.querySelectorAll('#dropdown a')
+  // Funciona con varias instancias (menú de escritorio y menú móvil).
+  const dropdowns = document.querySelectorAll<HTMLElement>('[data-dropdown]')
 
-  const toggleDropdown = function () {
-    dropdownMenu?.classList.toggle('hidden')
-    toggleArrow?.classList.toggle('arrow')
+  const setOpen = (dropdown: HTMLElement, open: boolean) => {
+    dropdown.querySelector('[data-dropdown-menu]')?.classList.toggle('hidden', !open)
+    dropdown.querySelector('[data-dropdown-arrow]')?.classList.toggle('rotate-180', open)
+    dropdown
+      .querySelector('[data-dropdown-button]')
+      ?.setAttribute('aria-expanded', String(open))
   }
 
-  dropdownButton?.addEventListener('click', function (e) {
-    e.stopPropagation()
-    toggleDropdown()
-  })
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector('[data-dropdown-button]')
+    const menu = dropdown.querySelector('[data-dropdown-menu]')
 
-  menuOptions.forEach((option) => {
-    option.addEventListener('click', () => {
-      toggleDropdown()
+    button?.addEventListener('click', (e) => {
+      e.stopPropagation()
+      setOpen(dropdown, menu?.classList.contains('hidden') ?? false)
     })
   })
 
-  document.documentElement.addEventListener('click', function () {
-    if (!dropdownMenu?.classList.contains('hidden')) {
-      toggleDropdown()
-    }
+  document.addEventListener('click', () => {
+    dropdowns.forEach((dropdown) => setOpen(dropdown, false))
   })
 </script>
-
-<style>
-  .arrow {
-    transform: rotate(180deg);
-    transition: 0.3s ease;
-  }
-</style>

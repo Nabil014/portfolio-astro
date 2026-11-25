@@ -6,14 +6,14 @@ const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 
-<main
+<div
   class='h-[100vh] max-w-5xl flex items-center flex-col justify-center px-9 gap-y-8 md:pt-[88px] lg:mb-24 text-white'
 >
   <div class='flex w-full flex-col items-center gap-y-3'>
-    <h1 class='text-4xl font-RobotoFlex tracking-[3px]'>
+    <h2 class='text-4xl font-RobotoFlex tracking-[3px]'>
       {t('experience.title')}
-    </h1>
+    </h2>
     <div class='w-7 h-1 bg-[#f66a41] rounded-full'></div>
   </div>
   <Timeline />
-</main>
+</div>

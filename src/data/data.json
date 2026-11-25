@@ -12,15 +12,15 @@
       "id": 2,
       "date": "2022",
       "titleES": "AF Air Systems - Freelance",
-      "descriptionES": "Diseño y desarrollo una Single Page Application con diversas secciones para una navegación intuitiva. Esta aplicación cuenta con integración de Google Maps, envío de emails y proporciona una experiencia de usuario óptima en todos los dispositivos gracias a su diseño responsivo.",
+      "descriptionES": "Diseñé y desarrollé una Single Page Application con diversas secciones para una navegación intuitiva. Esta aplicación cuenta con integración de Google Maps, envío de emails y proporciona una experiencia de usuario óptima en todos los dispositivos gracias a su diseño responsivo.",
       "descriptionEN": "Design and development of a Single Page Application with various sections for intuitive navigation. This application features Google Maps integration, email sending, and provides an optimal user experience on all devices thanks to its responsive design.",
       "href": "https://www.afairsystems.com/"
     },
     {
-      "id": 2,
+      "id": 3,
       "date": "2019",
       "titleES": "Electriluz",
-      "descriptionES": "Liderar empresa de +30 años de informática en San Juan, Argentina. Coordinando equipos de trabajo e impulsando el crecimiento de las ventas y la satisfacción del cliente.",
+      "descriptionES": "Lidero una empresa de informática con más de 30 años en San Juan, Argentina, coordinando equipos de trabajo e impulsando el crecimiento de las ventas y la satisfacción del cliente.",
       "descriptionEN": "Leading a 30+ year old IT company in San Juan, Argentina. Coordinating work teams and driving sales growth and customer satisfaction."
     }
   ],
@@ -30,7 +30,7 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1677853434/nomade-foto_j2oluu.jpg",
       "alt": "nómade img",
       "title": "Nómade",
-      "descriptionES": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, admin page,etc. para contratar hospedajes en cualquier parte del mundo.",
+      "descriptionES": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, panel de administración, etc. para contratar hospedajes en cualquier parte del mundo.",
       "descriptionEN": "REST API and Single Page Application (SPA) with map integration, payment gateway, admin page, etc. for booking accommodations anywhere in the world.",
       "demo": "https://nomade-khaki.vercel.app/",
       "repo": "https://github.com/Nabil014/nomade",
@@ -40,7 +40,7 @@
     {
       "id": "2",
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1699271582/h47yiqfaqlvybfktlfik.jpg",
-      "alt": "countries img",
+      "alt": "AF Air Systems img",
       "title": "AF Air Systems",
       "descriptionES": "SPA para empresa de servicios de refrigeración. El cliente la solicitó en portugués y holandés. Tiene envío de emails e integración de Google Maps.",
       "descriptionEN": "SPA for a refrigeration services company. The client requested it in Portuguese and Dutch. It includes email sending and Google Maps integration.",
@@ -95,7 +95,7 @@
       "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_206,w_390/v1685535960/dolar-app_eehswv.jpg",
       "alt": "dollar img",
       "title": "Dollar Converter",
-      "description": "Página convertir de $ARG a USD",
+      "description": "Página para convertir de pesos argentinos (ARS) a dólares (USD).",
       "demo": "https://dollar-app-chi.vercel.app/",
       "repo": "https://github.com/Nabil014/Dollar-App",
       "tech": ["JavaScript", "React", "Tailwind", "GitHub"],

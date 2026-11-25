@@ -8,7 +8,7 @@ const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 
-<main
+<div
   class='flex flex-col md:flex-row h-screen md:justify-center md:items-center gap-y-12 md:gap-y-10 max-w-5xl px-8 pt-14 pb-14'
 >
   <div class='w-full'>
@@ -30,12 +30,16 @@ const t = useTranslations(lang)
     <div class='flex gap-x-4 py-6 pt-10 md:pt-6 items-center'>
       <a
         target='_blank'
+        rel='noopener noreferrer'
+        aria-label='LinkedIn'
         href='https://www.linkedin.com/in/nabil-allis/'
         class='text-white hover:text-[#427D9D] scale-110 hover:scale-125 transition-all duration-300'
         ><LinkedinIcon /></a
       >
       <a
         target='_blank'
+        rel='noopener noreferrer'
+        aria-label='GitHub'
         href='https://github.com/Nabil014'
         class='text-white hover:text-[#427D9D] scale-110 hover:scale-125 transition-all duration-300'
         ><GithubIcon /></a
@@ -97,7 +101,7 @@ const t = useTranslations(lang)
       </div>
     </div>
   </div>
-</main>
+</div>
 
 <style>
   .slider {

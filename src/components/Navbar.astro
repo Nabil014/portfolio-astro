@@ -11,7 +11,7 @@ const t = useTranslations(lang)
   class='hidden md:flex justify-between py-4 items-center px-8 backdrop-blur-2xl rounded-b-xl'
   id='navbar'
 >
-  <a href='#top'>
+  <a href='#home' aria-label='Inicio'>
     <img
       src={logo.src}
       alt='logo portfolio'
@@ -43,7 +43,7 @@ const t = useTranslations(lang)
     class='sticky top-0 left-0 right-0 backdrop-blur-xl bg-opacity-60 z-10 flex justify-between items-center px-6 py-4 md:hidden'
   >
     <a
-      class='font-RobotoFlex text-orange-1 text-3xl'
+      class='font-RobotoFlex text-3xl'
       href='#home'
     >
       <img
@@ -52,7 +52,7 @@ const t = useTranslations(lang)
         class='h-14'
       /></a
     >
-    <button id='menu-icon'>
+    <button id='menu-icon' aria-label='Abrir menú'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         height='36'
@@ -73,28 +73,28 @@ const t = useTranslations(lang)
     <ul class='space-y-12 text-white text-3xl'>
       <li>
         <a
-          class='hover:text-orange-1 transition duration-300'
+          class='hover:text-[#f3b664] transition duration-300'
           href='#home'
           >{t('nav.home')}</a
         >
       </li>
       <li>
         <a
-          class='hover:text-orange-1 transition duration-300'
+          class='hover:text-[#f3b664] transition duration-300'
           href='#experience'
           >{t('nav.experience')}</a
         >
       </li>
       <li>
         <a
-          class='hover:text-orange-1 transition duration-300'
+          class='hover:text-[#f3b664] transition duration-300'
           href='#projects'
           >{t('nav.projects')}</a
         >
       </li>
       <li>
         <a
-          class='hover:text-orange-1 transition duration-300'
+          class='hover:text-[#f3b664] transition duration-300'
           href='#contact'
           >{t('nav.contact')}</a
         >
@@ -106,6 +106,7 @@ const t = useTranslations(lang)
     <button
       class='fixed top-0 right-0 px-6 py-4'
       id='close-icon'
+      aria-label='Cerrar menú'
     >
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -173,21 +174,6 @@ const t = useTranslations(lang)
     mobileMenu?.classList.remove('hidden')
     mobileMenu?.classList.add('flex')
     mobileMenu?.classList.add('transition-all')
-    const dropdownButton = document.querySelector(
-      '#mobile-menu #dropdownButton'
-    )
-    const dropdownMenu = document.querySelector('#mobile-menu #dropdown')
-    const toggleArrow = document.querySelector('#mobile-menu #arrow')
-
-    const toggleDropdown = function () {
-      dropdownMenu?.classList.toggle('hidden')
-      toggleArrow?.classList.toggle('arrow')
-    }
-
-    dropdownButton?.addEventListener('click', function (e) {
-      e.stopPropagation()
-      toggleDropdown()
-    })
   })
 
   closeIcon?.addEventListener('click', () => {
