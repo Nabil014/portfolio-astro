@@ -53,7 +53,8 @@
         "Cloudflare R2",
         "Mercado Pago"
       ],
-      "stack": "Full Stack"
+      "stack": "Full Stack",
+      "demoLabel": "site"
     },
     {
       "id": "10",
