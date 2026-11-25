@@ -2,8 +2,8 @@
   "timeline": [
     {
       "id": 0,
-      "date": "Actualidad",
-      "dateEN": "Present",
+      "date": "Mayo 2025 - Actualidad",
+      "dateEN": "May 2025 - Present",
       "titleES": "Team Leader - useTeam",
       "titleEN": "Team Leader - useTeam",
       "descriptionES": "Combino desarrollo práctico con decisiones de arquitectura, code reviews y mentoría técnica del equipo. Construyo productos con TypeScript en todo el stack: NestJS, Prisma y PostgreSQL en el backend; React, Next.js y Vite en el frontend; despliegue con Docker y AWS.",
