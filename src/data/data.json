@@ -10,6 +10,15 @@
       "descriptionEN": "I combine hands-on development with architecture decisions, code reviews and technical mentoring. I build products with TypeScript across the stack: NestJS, Prisma and PostgreSQL on the backend; React, Next.js and Vite on the frontend; shipped with Docker and AWS."
     },
     {
+      "id": 4,
+      "date": "Diciembre 2023 - Mayo 2025",
+      "dateEN": "December 2023 - May 2025",
+      "titleES": "Full Stack Developer - Dazlab",
+      "titleEN": "Full Stack Developer - Dazlab",
+      "descriptionES": "Desarrollo de aplicaciones web de punta a punta, del frontend al backend.",
+      "descriptionEN": "End-to-end web application development, from frontend to backend."
+    },
+    {
       "id": 1,
       "date": "2023",
       "titleES": "Desarrollador Frontend",
@@ -24,13 +33,6 @@
       "descriptionES": "Diseñé y desarrollé una Single Page Application con diversas secciones para una navegación intuitiva. Esta aplicación cuenta con integración de Google Maps, envío de emails y proporciona una experiencia de usuario óptima en todos los dispositivos gracias a su diseño responsivo.",
       "descriptionEN": "Design and development of a Single Page Application with various sections for intuitive navigation. This application features Google Maps integration, email sending, and provides an optimal user experience on all devices thanks to its responsive design.",
       "href": "https://www.afairsystems.com/"
-    },
-    {
-      "id": 3,
-      "date": "2019",
-      "titleES": "Electriluz",
-      "descriptionES": "Lidero una empresa de informática con más de 30 años en San Juan, Argentina, coordinando equipos de trabajo e impulsando el crecimiento de las ventas y la satisfacción del cliente.",
-      "descriptionEN": "Leading a 30+ year old IT company in San Juan, Argentina. Coordinating work teams and driving sales growth and customer satisfaction."
     }
   ],
   "dataProjects": [

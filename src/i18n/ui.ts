@@ -15,8 +15,6 @@ export const ui = {
 
     'home.buttonCV': 'Descargar CV',
     'home.webExperience': ' de experiencia en el desarrollo web.',
-    'home.store': ' liderando una empresa de informática.',
-    'home.year': 'año',
     'home.years': 'años',
 
     'experience.title': 'Experiencia',
@@ -36,8 +34,6 @@ export const ui = {
 
     'home.buttonCV': 'Download CV',
     'home.webExperience': ' of web development experience.',
-    'home.store': ' leading an IT company.',
-    'home.year': 'year',
     'home.years': 'years',
 
     'experience.title': 'Experience',
