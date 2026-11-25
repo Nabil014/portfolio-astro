@@ -89,7 +89,8 @@
         "React",
         "Tailwind"
       ],
-      "stack": "Frontend"
+      "stack": "Frontend",
+      "demoLabel": "site"
     },
     {
       "id": "1",
