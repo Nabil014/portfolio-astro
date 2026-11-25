@@ -1,11 +1,19 @@
 ---
 import GithubIcon from '../assets/icons/Github.astro'
+import data from '../data/data.json'
 import LinkedinIcon from '../assets/icons/Linkedin.astro'
 import ButtonCV from './common/ButtonCV.astro'
 import { getLangFromUrl, useTranslations } from '../i18n/utils'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+
+// Años completos desde el inicio en el desarrollo web (se recalcula en cada build).
+const [startYear, startMonth] = data.devExperienceStart.split('-').map(Number)
+const now = new Date()
+const monthsOfExperience =
+  (now.getFullYear() - startYear) * 12 + (now.getMonth() + 1 - startMonth)
+const yearsOfExperience = Math.floor(monthsOfExperience / 12)
 ---
 
 <div
@@ -54,7 +62,7 @@ const t = useTranslations(lang)
   <div class='md:flex flex-col gap-y-4 hidden'>
     <p class='text-2xl text-white/60'>
       <span class='font-NotoSerif font-light text-[#F9B572] text-3xl'
-        >+3 {t('home.years')}</span
+        >{`+${yearsOfExperience} ${t('home.years')}`}</span
       >
       {t('home.webExperience')}
     </p>
@@ -68,7 +76,7 @@ const t = useTranslations(lang)
           <span
             class='text-5xl absolute -top-1 -left-3 font-NotoSerif font-bold text-[#f04b34]'
             >+</span
-          > 3
+          > {yearsOfExperience}
         </h3>
       </div>
       <div class='flex pt-7'>
