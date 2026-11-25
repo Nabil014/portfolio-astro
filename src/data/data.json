@@ -35,15 +35,22 @@
   ],
   "dataProjects": [
     {
-      "id": "1",
-      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1677853434/nomade-foto_j2oluu.jpg",
-      "alt": "nómade img",
-      "title": "Nómade",
-      "descriptionES": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, panel de administración, etc. para contratar hospedajes en cualquier parte del mundo.",
-      "descriptionEN": "REST API and Single Page Application (SPA) with map integration, payment gateway, admin page, etc. for booking accommodations anywhere in the world.",
-      "demo": "https://nomade-khaki.vercel.app/",
-      "repo": "https://github.com/Nabil014/nomade",
-      "tech": ["JavaScript", "React", "CSS", "MongoDB", "Node.js", "Redux", "Git"],
+      "id": "9",
+      "image": "/projects/revelado.webp",
+      "alt": "revelado.app",
+      "title": "revelado.app",
+      "descriptionES": "Plataforma para fotógrafos de eventos en Argentina. Cada fotógrafo tiene su vitrina para vender fotos sueltas y álbumes completos, cobra directo con Mercado Pago y entrega los originales en alta resolución.",
+      "descriptionEN": "Platform for event photographers in Argentina. Each photographer gets a storefront to sell individual photos and full albums, gets paid directly through Mercado Pago and delivers the high-resolution originals.",
+      "demo": "https://revelado.app/",
+      "tech": [
+        "TypeScript",
+        "Next.js",
+        "PostgreSQL",
+        "Prisma",
+        "Tailwind",
+        "Cloudflare R2",
+        "Mercado Pago"
+      ],
       "stack": "Full Stack"
     },
     {
@@ -54,8 +61,31 @@
       "descriptionES": "SPA para empresa de servicios de refrigeración. El cliente la solicitó en portugués y holandés. Tiene envío de emails e integración de Google Maps.",
       "descriptionEN": "SPA for a refrigeration services company. The client requested it in Portuguese and Dutch. It includes email sending and Google Maps integration.",
       "demo": "https://www.afairsystems.com/",
-      "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
+      "tech": [
+        "JavaScript",
+        "React",
+        "Tailwind"
+      ],
       "stack": "Frontend"
+    },
+    {
+      "id": "1",
+      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1677853434/nomade-foto_j2oluu.jpg",
+      "alt": "nómade img",
+      "title": "Nómade",
+      "descriptionES": "REST API y Single Page Application (SPA) con integración de mapas, pasarela de pagos, panel de administración, etc. para contratar hospedajes en cualquier parte del mundo.",
+      "descriptionEN": "REST API and Single Page Application (SPA) with map integration, payment gateway, admin page, etc. for booking accommodations anywhere in the world.",
+      "demo": "https://nomade-khaki.vercel.app/",
+      "repo": "https://github.com/Nabil014/nomade",
+      "tech": [
+        "JavaScript",
+        "React",
+        "CSS",
+        "MongoDB",
+        "Node.js",
+        "Redux"
+      ],
+      "stack": "Full Stack"
     },
     {
       "id": "3",
@@ -72,70 +102,9 @@
         "Node.js",
         "Tailwind",
         "PostgreSQL",
-        "GitHub",
         "Zustand"
       ],
       "stack": "Full Stack"
-    },
-    {
-      "id": "6",
-      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_206,w_390/v1685367550/spaceApp_d1ojrk.jpg",
-      "alt": "space img",
-      "title": "Space Info",
-      "descriptionES": "SPA para una empresa de turismo espacial.",
-      "descriptionEN": "SPA for a space tourism company.",
-      "demo": "https://space-app-coral.vercel.app/",
-      "repo": "https://github.com/Nabil014/Space-App",
-      "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
-      "stack": "Frontend"
-    },
-    {
-      "id": "5",
-      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,w_390/v1676554046/weather2_h4ji7y.jpg",
-      "alt": "weather img",
-      "title": "Weather App",
-      "descriptionES": "Web app para buscar información meteorológica y detalles específicos de diversas ciudades del mundo.",
-      "descriptionEN": "Web app to look up weather information and specific details for cities around the world.",
-      "demo": "https://weather-app-beta-roan.vercel.app/",
-      "repo": "https://github.com/Nabil014/Weather-App",
-      "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
-      "stack": "Frontend"
-    },
-    {
-      "id": "7",
-      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_206,w_390/v1685535960/dolar-app_eehswv.jpg",
-      "alt": "dollar img",
-      "title": "Dollar Converter",
-      "descriptionES": "Página para convertir de pesos argentinos (ARS) a dólares (USD).",
-      "descriptionEN": "Page to convert Argentine pesos (ARS) to US dollars (USD).",
-      "demo": "https://dollar-app-chi.vercel.app/",
-      "repo": "https://github.com/Nabil014/Dollar-App",
-      "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
-      "stack": "Frontend"
-    },
-    {
-      "id": "4",
-      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_205,w_390/v1677641404/Sin_t%C3%ADtulo_ktf0ak.jpg",
-      "alt": "Spotify img",
-      "title": "Spotify Clone",
-      "descriptionES": "Landing page de Spotify desarrollada con Tailwind CSS.",
-      "descriptionEN": "Spotify landing page built with Tailwind CSS.",
-      "demo": "https://clon-spotify-beta.vercel.app/",
-      "repo": "https://github.com/Nabil014/Clon-Spotify",
-      "tech": ["JavaScript", "Next.js", "Tailwind"],
-      "stack": "Frontend"
-    },
-    {
-      "id": "8",
-      "image": "https://res.cloudinary.com/demf45vva/image/upload/c_scale,h_206,w_390/v1683816461/sorteos_zvumbi.jpg",
-      "alt": "sorteos img",
-      "title": "Sorteos App",
-      "descriptionES": "App para cargar participantes y realizar sorteos.",
-      "descriptionEN": "App to add participants and run giveaways.",
-      "demo": "https://sorteos-app.vercel.app/",
-      "repo": "https://github.com/Nabil014/sorteos-app",
-      "tech": ["JavaScript", "React", "Tailwind", "GitHub"],
-      "stack": "Frontend"
     }
   ]
 }
