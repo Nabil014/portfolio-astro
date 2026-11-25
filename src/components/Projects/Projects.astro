@@ -15,7 +15,7 @@ const t = useTranslations(lang)
     <div class='w-7 h-1 bg-[#f66a41] rounded-full'></div>
   </div>
   <div
-    class='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-12 place-items-center px-6'
+    class='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 items-stretch justify-items-center gap-10 px-6'
   >
     {
       data.dataProjects.map((project) => (
@@ -25,6 +25,8 @@ const t = useTranslations(lang)
           image={project.image}
           title={project.title}
           alt={project.alt}
+          description={lang === 'en' ? project.descriptionEN : project.descriptionES}
+          tech={project.tech}
         />
       ))
     }

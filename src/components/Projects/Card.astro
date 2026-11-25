@@ -1,36 +1,92 @@
 ---
 import { Image } from 'astro:assets'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+
 interface Props {
   demo: string
   repo?: string
   image: string
   title: string
   alt?: string
+  description: string
+  tech: string[]
 }
 
-const { image, title, demo, alt } = Astro.props
+const { image, title, demo, repo, alt, description, tech } = Astro.props
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<a
-  href={demo}
-  target='_blank'
-  rel='noopener noreferrer'
-  aria-label={title}
-  class='card-project m-auto p-2 w-full rounded-2xl hover:scale-105 transition duration-200'
+<article
+  class='card-project flex h-full w-full max-w-[420px] flex-col overflow-hidden rounded-2xl p-2 transition duration-200 hover:-translate-y-1'
 >
-  <Image
-    class='w-full h-auto rounded-xl'
-    width='390'
-    height='205'
-    src={image}
-    alt={alt ?? title}
-    loading='lazy'
-  />
-</a>
+  <a
+    href={demo}
+    target='_blank'
+    rel='noopener noreferrer'
+    tabindex='-1'
+    aria-hidden='true'
+    class='block overflow-hidden rounded-xl'
+  >
+    <Image
+      class='aspect-[390/205] h-auto w-full rounded-xl object-cover transition duration-300 hover:scale-105'
+      width='390'
+      height='205'
+      src={image}
+      alt={alt ?? title}
+      loading='lazy'
+    />
+  </a>
+
+  <div class='flex flex-1 flex-col gap-y-3 px-3 pb-3 pt-4'>
+    <h3 class='font-RobotoFlex text-xl font-medium tracking-wide text-white'>
+      {title}
+    </h3>
+    <p class='text-sm leading-relaxed text-gray-400'>{description}</p>
+
+    <ul
+      class='flex flex-wrap gap-2 pt-1'
+      aria-label={t('projects.tech')}
+    >
+      {
+        tech.map((item) => (
+          <li class='rounded-full border border-white/15 bg-white/5 px-2.5 py-0.5 font-Ubuntu text-xs text-[#F9B572]'>
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class='mt-auto flex gap-x-3 pt-3'>
+      <a
+        href={demo}
+        target='_blank'
+        rel='noopener noreferrer'
+        class='rounded-md border border-transparent bg-[#f66a41] px-4 py-1.5 text-sm font-medium text-white transition hover:bg-[#ff7d55]'
+      >
+        {t('projects.demo')}
+        <span class='sr-only'> — {title}</span>
+      </a>
+      {
+        repo && (
+          <a
+            href={repo}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='rounded-md border border-white/25 px-4 py-1.5 text-sm font-medium text-white transition hover:border-white/60 hover:bg-white/10'
+          >
+            {t('projects.code')}
+            <span class='sr-only'> — {title}</span>
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>
 
 <style>
   .card-project {
-    backdrop-filter: none;
     outline-offset: -1px;
     background-image: radial-gradient(
       circle farthest-side at 50% 0,
