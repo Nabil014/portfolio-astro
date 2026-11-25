@@ -1,6 +1,15 @@
 {
   "timeline": [
     {
+      "id": 0,
+      "date": "Actualidad",
+      "dateEN": "Present",
+      "titleES": "Team Leader - useTeam",
+      "titleEN": "Team Leader - useTeam",
+      "descriptionES": "Combino desarrollo práctico con decisiones de arquitectura, code reviews y mentoría técnica del equipo. Construyo productos con TypeScript en todo el stack: NestJS, Prisma y PostgreSQL en el backend; React, Next.js y Vite en el frontend; despliegue con Docker y AWS.",
+      "descriptionEN": "I combine hands-on development with architecture decisions, code reviews and technical mentoring. I build products with TypeScript across the stack: NestJS, Prisma and PostgreSQL on the backend; React, Next.js and Vite on the frontend; shipped with Docker and AWS."
+    },
+    {
       "id": 1,
       "date": "2023",
       "titleES": "Desarrollador Frontend",
